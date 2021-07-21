@@ -1,5 +1,5 @@
 {% set name = "idyntree" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 623675bc1ec40c0fbcde504203dd2ab022198da720e1ee078af5e2369b8a092e
+  sha256: a0021a007a55362a3467da8549502118871861f320aa00c2099c16a83b907175
 
 build:
   number: 0
@@ -47,6 +47,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - meshcat-python
 
 test:
   commands:
