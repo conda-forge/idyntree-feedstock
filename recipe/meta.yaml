@@ -1,5 +1,5 @@
 {% set name = "idyntree" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a0021a007a55362a3467da8549502118871861f320aa00c2099c16a83b907175
+  sha256: 98d202817500d0440e72fff386a0d0dc94acba0e5aa25bda111be1b50ea9cf67
 
 build:
   number: 0
@@ -65,7 +65,7 @@ test:
 about:
   home: https://github.com/robotology/idyntree
   license: LGPL-2.1-or-later
-  license_file: LICENSE.LGPL2 
+  license_file: LICENSE.LGPL2
   summary: Multibody Dynamics Library designed for Free Floating Robots.
 
 extra:
