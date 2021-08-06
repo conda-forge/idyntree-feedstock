@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# Workaround for low-memory Travis images
+if [ ${target_platform} == "linux-ppc64le" ]; then
+  NUM_PARALLEL=-j1
+else
+  NUM_PARALLEL=
+fi
+
 mkdir build
 cd build
 
@@ -17,6 +24,6 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DPython3_EXECUTABLE:PATH=$PYTHON \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON 
 
-cmake --build . --config Release
+cmake --build . --config Release ${NUM_PARALLEL}
 cmake --build . --config Release --target install
 ctest --output-on-failure -C Release
