@@ -32,4 +32,17 @@ if errorlevel 1 exit 1
 ctest --output-on-failure -C Release 
 if errorlevel 1 exit 1
 
+:: Fix Python package version
+%PYTHON% replace.py -f setup.py --pre 'use_scm_version=dict(local_scheme="dirty-tag"),' --post 'version=$PKG_VERSION,'
 
+:: Python package
+%PYTHON% ^
+    -m build ^
+    --wheel ^
+    --outdir dist ^
+    --no-isolation ^
+    --skip-dependency-check ^
+    "-C--global-option=build_ext" ^
+    "-C--global-option=--no-cmake-extension=all" ^
+    .
+pip install --no-deps dist/*.whl
