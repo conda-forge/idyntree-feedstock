@@ -37,7 +37,6 @@ python \
     --no-isolation \
     --skip-dependency-check \
     "-C--global-option=build_ext" \
-    "-C--global-option=-DBUILD_SHARED_LIBS:BOOL=ON" \
-    "-C--global-option=--component=python" \
+    "-C--global-option=--no-cmake-extension=all" \
     .
 pip install --no-deps dist/*.whl
