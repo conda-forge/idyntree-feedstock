@@ -30,7 +30,11 @@ ctest --output-on-failure -C Release
 
 cd ..
 
-python \
+# Fix Python package version
+$PYTHON replace.py -f setup.py --pre 'use_scm_version=dict(local_scheme="dirty-tag"),' --post 'version=$PKG_VERSION,'
+
+# Python package
+$PYTHON \
     -m build \
     --wheel \
     --outdir dist \
