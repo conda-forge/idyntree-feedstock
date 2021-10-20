@@ -52,5 +52,5 @@ diff -u setup.py.bak setup.py
     .
 if errorlevel 1 exit 1
 
-%PYTHON% -m pip install --no-deps .\dist\idyntree*.whl
+%PYTHON% -m pip install --no-deps dist\*.whl
 if errorlevel 1 exit 1
