@@ -46,4 +46,4 @@ sed -i "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_VERSI
     "-C--global-option=build_ext" ^
     "-C--global-option=--no-cmake-extension=all" ^
     .
-pip install --no-deps dist/*.whl
+%PYTHON% -m pip install --no-deps ./dist/idyntree*.whl
