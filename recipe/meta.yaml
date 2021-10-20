@@ -32,7 +32,9 @@ requirements:
     - {{ cdt('libxau') }}  # [linux]
     - {{ cdt('expat') }}  # [linux]
     - sed  # [unix]
+    - diffutils [unix]
     - m2-sed  # [win]
+    - m2-diffutils  # [win]
 
   host:
     - libxml2
