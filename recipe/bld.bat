@@ -35,6 +35,7 @@ if errorlevel 1 exit 1
 :: Fix Python package version
 cd ..
 sed -i "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_VERSION%"",|g" setup.py
+if errorlevel 1 exit 1
 
 :: Python package
 %PYTHON% ^
@@ -46,4 +47,7 @@ sed -i "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_VERSI
     "-C--global-option=build_ext" ^
     "-C--global-option=--no-cmake-extension=all" ^
     .
+if errorlevel 1 exit 1
+
 %PYTHON% -m pip install --no-deps ./dist/idyntree*.whl
+if errorlevel 1 exit 1
