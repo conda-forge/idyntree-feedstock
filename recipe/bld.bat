@@ -34,7 +34,7 @@ if errorlevel 1 exit 1
 
 :: Fix Python package version
 cd ..
-sed -i "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_VERSION%"",|g" setup.py
+sed -i.bak "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_VERSION%"",|g" setup.py
 if errorlevel 1 exit 1
 
 :: Python package
