@@ -38,7 +38,7 @@ sed -i.bak "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_V
 if errorlevel 1 exit 1
 
 :: Inspect diff
-diff -u setup.py setup.py.bak
+diff -u setup.py.bak setup.py
 
 :: Python package
 %PYTHON% ^
