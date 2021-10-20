@@ -31,6 +31,7 @@ requirements:
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxau') }}  # [linux]
     - {{ cdt('expat') }}  # [linux]
+    - m2-sed  # [win]
 
   host:
     - libxml2
