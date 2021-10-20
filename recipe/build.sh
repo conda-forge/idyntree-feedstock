@@ -30,7 +30,7 @@ ctest --output-on-failure -C Release
 
 # Fix Python package version
 cd ..
-sed -i "s|use_scm_version=dict(local_scheme=\"dirty-tag\"),|version=\"$PKG_VERSION\",|g" setup.py
+sed -i.bak "s|use_scm_version=dict(local_scheme=\"dirty-tag\"),|version=\"$PKG_VERSION\",|g" setup.py
 
 # Python package
 $PYTHON \
