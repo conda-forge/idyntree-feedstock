@@ -42,7 +42,6 @@ diff -u setup.py.bak setup.py
 
 :: Delete wheel folder
 rmdir /s /q _dist_conda
-if errorlevel 1 exit 1
 
 :: Generate the wheel
 %PYTHON% ^
