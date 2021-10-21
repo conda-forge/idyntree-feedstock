@@ -39,12 +39,17 @@ if errorlevel 1 exit 1
 
 :: Inspect diff
 diff -u setup.py.bak setup.py
+if errorlevel 1 exit 1
 
-:: Python package
+:: Delete wheel folder
+rmdir /s /q _dist_conda
+if errorlevel 1 exit 1
+
+:: Generate the wheel
 %PYTHON% ^
     -m build ^
     --wheel ^
-    --outdir dist ^
+    --outdir _dist_conda ^
     --no-isolation ^
     --skip-dependency-check ^
     "-C--global-option=build_ext" ^
@@ -52,5 +57,17 @@ diff -u setup.py.bak setup.py
     .
 if errorlevel 1 exit 1
 
-%PYTHON% -m pip install --no-deps dist\*.whl
+:: Install Python package
+%PYTHON% -m pip install ^
+    --no-index --find-links=./_dist_conda/ ^
+    --no-build-isolation --no-deps ^
+    idyntree
+if errorlevel 1 exit 1
+
+:: Delete wheel folder
+rmdir /s /q _dist_conda
+if errorlevel 1 exit 1
+
+:: Restore original files
+move /y setup.py.bak setup.py
 if errorlevel 1 exit 1

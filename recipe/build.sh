@@ -31,16 +31,30 @@ ctest --output-on-failure -C Release
 # Fix Python package version
 cd ..
 sed -i.bak "s|use_scm_version=dict(local_scheme=\"dirty-tag\"),|version=\"$PKG_VERSION\",|g" setup.py
-diff -u setup.py.bak setup.py || true
+diff -u setup.py{.bak,} || true
 
-# Python package
+# Delete wheel folder
+rm -rf _dist_conda/
+
+# Generate the wheel
 $PYTHON \
     -m build \
     --wheel \
-    --outdir dist \
+    --outdir _dist_conda \
     --no-isolation \
     --skip-dependency-check \
     "-C--global-option=build_ext" \
     "-C--global-option=--no-cmake-extension=all" \
     .
-pip install --no-deps dist/*.whl
+
+# Install Python package
+pip install \
+  --no-index --find-links=./_dist_conda/ \
+  --no-build-isolation --no-deps \
+  idyntree
+
+# Delete wheel folder
+rm -rf _dist_conda/
+
+# Restore original files
+mv setup.py{.bak,}
