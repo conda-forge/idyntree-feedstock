@@ -39,7 +39,6 @@ if errorlevel 1 exit 1
 
 :: Inspect diff
 diff -u setup.py.bak setup.py
-if errorlevel 1 exit 1
 
 :: Delete wheel folder
 rmdir /s /q _dist_conda
