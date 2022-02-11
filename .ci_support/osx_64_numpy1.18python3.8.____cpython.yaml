@@ -1,5 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
+assimp:
+- '5.2'
 c_compiler:
 - clang
 c_compiler_version:
