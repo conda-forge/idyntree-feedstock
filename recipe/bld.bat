@@ -18,6 +18,7 @@ cmake ^
     -DIDYNTREE_COMPILES_YARP_TOOLS:BOOL=OFF ^
     -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON ^
     -DPython3_EXECUTABLE:PATH=%PYTHON% ^
+    -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda ^
     %SRC_DIR%
 if errorlevel 1 exit 1
 
@@ -31,42 +32,4 @@ if errorlevel 1 exit 1
 
 :: Test.
 ctest --output-on-failure -C Release 
-if errorlevel 1 exit 1
-
-:: Fix Python package version
-cd ..
-sed -i.bak "s|use_scm_version=dict(local_scheme=""dirty-tag""),|version=""%PKG_VERSION%"",|g" setup.py
-if errorlevel 1 exit 1
-
-:: Inspect diff
-diff -u setup.py.bak setup.py
-
-:: Delete wheel folder
-rmdir /s /q _dist_conda
-
-:: Generate the wheel
-%PYTHON% ^
-    -m build ^
-    --wheel ^
-    --outdir _dist_conda ^
-    --no-isolation ^
-    --skip-dependency-check ^
-    "-C--global-option=build_ext" ^
-    "-C--global-option=--no-cmake-extension=all" ^
-    .
-if errorlevel 1 exit 1
-
-:: Install Python package
-%PYTHON% -m pip install ^
-    --no-index --find-links=./_dist_conda/ ^
-    --no-build-isolation --no-deps ^
-    idyntree
-if errorlevel 1 exit 1
-
-:: Delete wheel folder
-rmdir /s /q _dist_conda
-if errorlevel 1 exit 1
-
-:: Restore original files
-move /y setup.py.bak setup.py
 if errorlevel 1 exit 1
