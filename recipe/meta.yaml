@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 2780948e2776f5637bc42ea02ef948771bac8c5d582ff6c8e3c852e8e2ec9296
+  sha256: 1abc311b9a5418257943d85fe00b07b53f15cce41ac5a5f4d455b176f55f8c37
 
 build:
   number: 0
