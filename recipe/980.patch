@@ -1,0 +1,28 @@
+From c2418a12d01689a48d2916527f11745badfb5995 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio.traversaro@iit.it>
+Date: Sat, 12 Mar 2022 18:30:03 +0100
+Subject: [PATCH] Fix cross-compilation of Python bindings
+
+---
+ bindings/CMakeLists.txt | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/bindings/CMakeLists.txt b/bindings/CMakeLists.txt
+index 168c3e6e14..498f8fb36b 100644
+--- a/bindings/CMakeLists.txt
++++ b/bindings/CMakeLists.txt
+@@ -41,8 +41,12 @@ if(IDYNTREE_USES_PYTHON OR IDYNTREE_USES_PYTHON_PYBIND11)
+     else()
+         set(IDYNTREE_SEARCHED_Python_Development_Component "Development.Module")
+     endif()
+-    find_package(Python3 COMPONENTS Interpreter ${IDYNTREE_SEARCHED_Python_Development_Component} NumPy REQUIRED)
+-
++    if(${IDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES} OR ${IDYNTREE_PACKAGE_FOR_PYPI})
++        set(IDYNTREE_SEARCHED_Python_Interpreter "")
++     else()
++        set(IDYNTREE_SEARCHED_Python_Interpreter "Interpreter")
++    endif()
++        find_package(Python3 COMPONENTS ${IDYNTREE_SEARCHED_Python_Interpreter} ${IDYNTREE_SEARCHED_Python_Development_Component} NumPy REQUIRED)
+     if (IDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES)
+        set(PYTHON_INSTDIR ${Python3_SITELIB}/idyntree)
+     elseif(IDYNTREE_PACKAGE_FOR_PYPI)
