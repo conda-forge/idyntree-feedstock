@@ -35,13 +35,13 @@ requirements:
     - diffutils  # [unix]
     - m2-sed  # [win]
     - m2-diffutils  # [win]
+    - swig
 
   host:
     - libxml2
     - ipopt
     - eigen
     - irrlicht
-    - swig
     - pip
     - build
     - python
