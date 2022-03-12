@@ -1,7 +1,7 @@
 From c2418a12d01689a48d2916527f11745badfb5995 Mon Sep 17 00:00:00 2001
 From: Silvio Traversaro <silvio.traversaro@iit.it>
 Date: Sat, 12 Mar 2022 18:30:03 +0100
-Subject: [PATCH] Fix cross-compilation of Python bindings
+Subject: [PATCH 1/2] Fix cross-compilation of Python bindings
 
 ---
  bindings/CMakeLists.txt | 8 ++++++--
@@ -26,3 +26,24 @@ index 168c3e6e14..498f8fb36b 100644
      if (IDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES)
         set(PYTHON_INSTDIR ${Python3_SITELIB}/idyntree)
      elseif(IDYNTREE_PACKAGE_FOR_PYPI)
+
+From 6d06829511be1e7e361ef694564789674b5042f3 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio.traversaro@iit.it>
+Date: Sat, 12 Mar 2022 18:50:49 +0100
+Subject: [PATCH 2/2] Update CMakeLists.txt
+
+---
+ bindings/CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/bindings/CMakeLists.txt b/bindings/CMakeLists.txt
+index 498f8fb36b..fb8e9c9164 100644
+--- a/bindings/CMakeLists.txt
++++ b/bindings/CMakeLists.txt
+@@ -32,6 +32,7 @@ option(IDYNTREE_USES_MATLAB "Do you want to create the MATLAB bindings" FALSE)
+ option(IDYNTREE_USES_OCTAVE "Do you want to create the OCTAVE bindings" FALSE)
+ option(IDYNTREE_GENERATE_MATLAB "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper" FALSE)
+ option(IDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES "Do you want iDynTree to detect and install in the active site-package directory? (it could be a system dir)" FALSE)
++option(IDYNTREE_PACKAGE_FOR_PYPI "Are you packaging iDynTree for upload in PyPI?" FALSE)
+ 
+ find_package(SWIG)
