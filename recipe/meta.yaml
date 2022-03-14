@@ -35,13 +35,16 @@ requirements:
     - diffutils  # [unix]
     - m2-sed  # [win]
     - m2-diffutils  # [win]
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
+    - swig
 
   host:
     - libxml2
     - ipopt
     - eigen
     - irrlicht
-    - swig
     - pip
     - build
     - python
