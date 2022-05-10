@@ -1,0 +1,22 @@
+From ce1334ca4a3ef139f6fab72f767292b19c601e07 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio.traversaro@iit.it>
+Date: Tue, 10 May 2022 12:58:46 +0200
+Subject: [PATCH] Fix CMake version
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b99f8144f5..32aed9f6b7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -8,7 +8,7 @@
+ 
+ cmake_minimum_required(VERSION 3.16)
+ 
+-project(iDynTree VERSION 5.1.0
++project(iDynTree VERSION 5.2.0
+                  LANGUAGES C CXX)
+ 
+ # Disable in source build, unless Eclipse is used
