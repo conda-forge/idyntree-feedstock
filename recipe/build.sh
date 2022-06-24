@@ -1,5 +1,12 @@
 #!/bin/sh
 
+
+if [ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]; then
+  NUM_PARALLEL=-j1
+else
+  NUM_PARALLEL=
+fi
+
 mkdir build
 cd build
 
@@ -19,8 +26,8 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
       -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda
 
-cmake --build . --config Release
-cmake --build . --config Release --target install
+cmake --build . --config Release ${NUM_PARALLEL}
+cmake --build . --config Release --target install ${NUM_PARALLEL}
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
   ctest --output-on-failure -C Release
 fi
