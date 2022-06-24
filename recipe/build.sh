@@ -2,9 +2,11 @@
 
 
 if [ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]; then
-  NUM_PARALLEL=-j1
+  echo "Using 1 thread to build"
+  export NUM_PARALLEL=-j1
 else
-  NUM_PARALLEL=
+  echo "Use all available cores to build"
+  export NUM_PARALLEL=
 fi
 
 mkdir build
