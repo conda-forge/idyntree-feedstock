@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-if [ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]; then
+if [[ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]]; then
   echo "Using 1 thread to build"
   export NUM_PARALLEL=-j1
 else
