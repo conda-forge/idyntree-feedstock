@@ -4,11 +4,9 @@
 if [[ ${target_platform} == "linux-ppc64le" || ${target_platform} == "linux-aarch64" ]]; then
   echo "Using 1 thread to build"
   export NUM_PARALLEL=-j1
-  export BUILD_TESTING=OFF
 else
   echo "Use all available cores to build"
   export NUM_PARALLEL=
-  export BUILD_TESTING=ON
 fi
 
 mkdir build
@@ -16,7 +14,7 @@ cd build
 
 cmake ${CMAKE_ARGS} -GNinja .. \
       -DCMAKE_BUILD_TYPE=Release \
-      -DBUILD_TESTING=${BUILD_TESTING} \
+      -DBUILD_TESTING:BOOL=ON \
       -DIDYNTREE_USES_IPOPT:BOOL=ON \
       -DIDYNTREE_USES_OSQPEIGEN:BOOL=ON \
       -DIDYNTREE_USES_IRRLICHT:BOOL=ON \
