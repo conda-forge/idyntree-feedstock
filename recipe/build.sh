@@ -9,12 +9,18 @@ else
   export NUM_PARALLEL=
 fi
 
+if [[ ${target_platform} == "linux-ppc64le" ]]; then
+  export BUILD_TESTING=OFF
+else
+  export BUILD_TESTING=ON
+fi
+
 mkdir build
 cd build
 
 cmake ${CMAKE_ARGS} -GNinja .. \
       -DCMAKE_BUILD_TYPE=Release \
-      -DBUILD_TESTING:BOOL=ON \
+      -DBUILD_TESTING:BOOL=${BUILD_TESTING} \
       -DIDYNTREE_USES_IPOPT:BOOL=ON \
       -DIDYNTREE_USES_OSQPEIGEN:BOOL=ON \
       -DIDYNTREE_USES_IRRLICHT:BOOL=ON \
