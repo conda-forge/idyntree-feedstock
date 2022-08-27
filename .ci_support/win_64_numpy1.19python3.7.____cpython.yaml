@@ -1,13 +1,13 @@
 assimp:
 - 5.2.4
 c_compiler:
-- vs2017
+- vs2019
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2017
+- vs2019
 ipopt:
 - 3.14.8
 libxml2:
