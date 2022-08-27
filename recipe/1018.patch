@@ -21,7 +21,7 @@ index eb110f5eb0f..b3b639f367b 100644
 +# See https://github.com/conda-forge/idyntree-feedstock/pull/44
 +if(Python3_INTERPRETER_ID STREQUAL "PyPy")
 +    execute_process(COMMAND ${Python3_EXECUTABLE}
-+                    -c "import sysconfig; print(sysconfig.get_config_var("EXT_SUFFIX"))"
++                    -c "import sysconfig; print(sysconfig.get_config_var('EXT_SUFFIX'))"
 +                    OUTPUT_VARIABLE IDYNTREE_PYTHON_EXT_SUFFIX)
 +    string(STRIP ${IDYNTREE_PYTHON_EXT_SUFFIX} IDYNTREE_PYTHON_EXT_SUFFIX)
 +    set_property (TARGET ${target_name} PROPERTY SUFFIX "${IDYNTREE_PYTHON_EXT_SUFFIX}")
