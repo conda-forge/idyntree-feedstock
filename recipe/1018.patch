@@ -1,20 +1,23 @@
-From 4847fc10dfd665ee1aefce74c13d05bf9b5c9dde Mon Sep 17 00:00:00 2001
+From a48d2b48f11b759a9eda7d3cac1a215cabd07684 Mon Sep 17 00:00:00 2001
 From: Silvio Traversaro <silvio.traversaro@iit.it>
 Date: Sat, 27 Aug 2022 12:03:47 +0200
 Subject: [PATCH] Update CMakeLists.txt
 
 ---
- bindings/python/CMakeLists.txt | 12 ++++++++++++
- 1 file changed, 12 insertions(+)
+ bindings/python/CMakeLists.txt | 19 +++++++++++++++----
+ 1 file changed, 15 insertions(+), 4 deletions(-)
 
 diff --git a/bindings/python/CMakeLists.txt b/bindings/python/CMakeLists.txt
-index eb110f5eb0f..b3b639f367b 100644
+index eb110f5eb0f..d8b90b04462 100644
 --- a/bindings/python/CMakeLists.txt
 +++ b/bindings/python/CMakeLists.txt
-@@ -23,6 +23,18 @@ set_property(
+@@ -23,6 +23,21 @@ set_property(
      TARGET ${target_name}
      PROPERTY SWIG_DEPENDS python.i numpy.i)
  
++if(WIN32)
++    set_target_properties(${target_name} PROPERTIES SUFFIX ".pyd")
++endif(WIN32)
 +
 +# Fix for PyPy
 +# See https://gitlab.kitware.com/cmake/cmake/-/issues/23651
@@ -30,3 +33,15 @@ index eb110f5eb0f..b3b639f367b 100644
  if(NOT MSVC)
      set_property(
          TARGET ${target_name}
+@@ -48,10 +63,6 @@ install(
+     DESTINATION ${PYTHON_INSTDIR}
+     COMPONENT python)
+ 
+-if(WIN32)
+-    set_target_properties(${target_name} PROPERTIES SUFFIX ".pyd")
+-endif(WIN32)
+-
+ add_subdirectory(scripts)
+ 
+ # if compile tests execute also python tests
+ 
