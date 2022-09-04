@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '14'
 ipopt:
-- 3.14.8
+- 3.14.9
 libxml2:
 - '2.9'
 macos_machine:
