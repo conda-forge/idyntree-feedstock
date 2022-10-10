@@ -22,7 +22,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - pkg-config
     - ninja
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
