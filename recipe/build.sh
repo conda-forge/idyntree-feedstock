@@ -18,6 +18,8 @@ fi
 mkdir build
 cd build
 
+env
+
 cmake ${CMAKE_ARGS} -GNinja .. \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING:BOOL=${BUILD_TESTING} \
@@ -33,6 +35,8 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DPython3_EXECUTABLE:PATH=$PYTHON \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
       -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda
+      
+cat CMakeCache.txt 
 
 cmake --build . --config Release ${NUM_PARALLEL}
 cmake --build . --config Release --target install ${NUM_PARALLEL}
