@@ -10,8 +10,7 @@ source:
   sha256: 423b6ef95dd3f0a1868d3f351cd5d458fd1a9038abe57709eb3e1c753e4f9053
 
 build:
-  skip: true  # [ppc64le]
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
