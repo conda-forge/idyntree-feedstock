@@ -18,7 +18,7 @@ fi
 mkdir build
 cd build
 
-echo "Value set to Python3_NumPy_INCLUDE_DIR: $BUILD_PREFIX/venv/lib/"`ls $BUILD_PREFIX/venv/lib/ | grep "python\|pypy"`"/site-packages/numpy/core/include"
+echo "Value set to Python3_NumPy_INCLUDE_DIR: "$BUILD_PREFIX/venv/lib/`ls $BUILD_PREFIX/venv/lib/ | grep "python\|pypy"`/site-packages/numpy/core/include
 
 ls $BUILD_PREFIX/venv/lib/ | grep "python\|pypy"`
 
@@ -41,7 +41,7 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
       -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \
       -DPython3_INCLUDE_DIR:PATH=$BUILD_PREFIX/include/`ls $BUILD_PREFIX/include | grep "python\|pypy"` \
-      -DPython3_NumPy_INCLUDE_DIR:PATH=$BUILD_PREFIX/venv/lib/`ls $BUILD_PREFIX/venv/lib/ | grep "python\|pypy"`/site-packages/numpy/core/include \
+      -DPython3_NumPy_INCLUDE_DIR:PATH=$BUILD_PREFIX/venv/lib/`ls $BUILD_PREFIX/venv/lib/ | grep "python\|pypy"`/site-packages/numpy/core/include
       
 cat CMakeCache.txt 
 
