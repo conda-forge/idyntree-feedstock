@@ -18,6 +18,8 @@ fi
 mkdir build
 cd build
 
+export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/
+
 env
 
 cmake ${CMAKE_ARGS} -GNinja .. \
