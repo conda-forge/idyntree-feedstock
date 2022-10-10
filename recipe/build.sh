@@ -36,7 +36,9 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_COMPILES_YARP_TOOLS:BOOL=OFF \
       -DPython3_EXECUTABLE:PATH=$PYTHON \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
-      -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda
+      -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \
+      -DPython3_INCLUDE_DIR:PATH=$BUILD_PREFIX/include/`ls $BUILD_PREFIX/include | grep "python\|pypy"` \
+      -DPython3_NumPy_INCLUDE_DIR:PATH=$BUILD_PREFIX/venv/lib/`ls $BUILD_PREFIX/venv/lib/ | grep "python\|pypy"`"/site-packages/numpy/core/include" \
       
 cat CMakeCache.txt 
 
