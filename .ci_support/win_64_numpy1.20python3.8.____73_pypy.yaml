@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 ipopt:
-- 3.14.9
+- 3.14.10
 libxml2:
 - '2.9'
 numpy:
