@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 assimp:
-- 5.2.4
+- 5.2.5
 c_compiler:
 - clang
 c_compiler_version:
@@ -17,7 +17,7 @@ cxx_compiler_version:
 ipopt:
 - 3.14.10
 libxml2:
-- '2.9'
+- '2.10'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:

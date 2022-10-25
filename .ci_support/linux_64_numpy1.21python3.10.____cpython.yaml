@@ -1,5 +1,5 @@
 assimp:
-- 5.2.4
+- 5.2.5
 c_compiler:
 - gcc
 c_compiler_version:
@@ -19,7 +19,7 @@ docker_image:
 ipopt:
 - 3.14.10
 libxml2:
-- '2.9'
+- '2.10'
 numpy:
 - '1.21'
 pin_run_as_build:
