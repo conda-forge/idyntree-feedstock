@@ -8,10 +8,12 @@ package:
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 883b60339319fd06f57aae9cdddedb02fa01b06bc3abfb278c881009cdf15c40
+  patches:
+    - 1046.patch
 
 build:
   skip: true  # [ppc64le]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -59,7 +61,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - meshcat-python
 
 test:
   commands:
