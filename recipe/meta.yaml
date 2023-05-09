@@ -57,6 +57,7 @@ requirements:
     - xorg-libxfixes  # [linux]
 
   run:
+    - glfw
     - python
     - {{ pin_compatible('numpy') }}
 
