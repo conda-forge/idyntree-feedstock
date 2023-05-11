@@ -1,5 +1,5 @@
 {% set name = "idyntree" %}
-{% set version = "8.1.0" %}
+{% set version = "9.0.0" %}
 
 package:
   name: {{ name }}
@@ -7,13 +7,11 @@ package:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f2b2b6ca33f814448bde33cf1a95f3810363e05b244dc251dcff57f708a5bfc2
-  patches:
-    - 1046.patch
+  sha256: c2d43b93313f5631e34c8ca252be96094fc6caa421effc4eb9497ee94d48d906
 
 build:
   skip: true  # [ppc64le]
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -47,6 +45,7 @@ requirements:
     - libxml2
     - ipopt
     - eigen
+    - glfw
     - irrlicht
     - pip
     - python-build
