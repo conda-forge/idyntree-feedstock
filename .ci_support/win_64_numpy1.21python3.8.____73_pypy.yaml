@@ -13,13 +13,13 @@ ipopt:
 libxml2:
 - '2.10'
 numpy:
-- '1.20'
+- '1.21'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.8.* *_73_pypy
 target_platform:
 - win-64
 zip_keys:
