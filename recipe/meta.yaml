@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
   sha256: c2d43b93313f5631e34c8ca252be96094fc6caa421effc4eb9497ee94d48d906
-  patches:
-    - 1046.patch
 
 build:
   skip: true  # [ppc64le]
@@ -47,6 +45,7 @@ requirements:
     - libxml2
     - ipopt
     - eigen
+    - glfw
     - irrlicht
     - pip
     - python-build
