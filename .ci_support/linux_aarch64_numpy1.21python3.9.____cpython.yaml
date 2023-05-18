@@ -23,7 +23,7 @@ docker_image:
 ipopt:
 - 3.14.12
 libxml2:
-- '2.10'
+- '2.11'
 numpy:
 - '1.21'
 pin_run_as_build:
