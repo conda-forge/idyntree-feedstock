@@ -16,6 +16,8 @@ cxx_compiler_version:
 - '15'
 ipopt:
 - 3.14.12
+libosqp:
+- 0.6.3
 libxml2:
 - '2.11'
 macos_machine:
