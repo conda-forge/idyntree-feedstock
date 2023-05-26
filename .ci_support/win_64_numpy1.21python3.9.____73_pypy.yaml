@@ -10,6 +10,8 @@ cxx_compiler:
 - vs2019
 ipopt:
 - 3.14.12
+libosqp:
+- 0.6.3
 libxml2:
 - '2.11'
 numpy:
