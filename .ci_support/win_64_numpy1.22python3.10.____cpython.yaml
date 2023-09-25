@@ -15,7 +15,7 @@ libosqp:
 libxml2:
 - '2.11'
 numpy:
-- '1.21'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -27,3 +27,4 @@ target_platform:
 zip_keys:
 - - python
   - numpy
+  - channel_sources

@@ -11,7 +11,7 @@ cdt_arch:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- conda-forge/label/python_rc,conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -27,13 +27,13 @@ libosqp:
 libxml2:
 - '2.11'
 numpy:
-- '1.21'
+- '1.26'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.8.* *_73_pypy
+- 3.12.* *_cpython
 target_platform:
 - linux-aarch64
 zip_keys:
@@ -41,3 +41,4 @@ zip_keys:
   - cxx_compiler_version
 - - python
   - numpy
+  - channel_sources
