@@ -3,7 +3,7 @@ assimp:
 c_compiler:
 - vs2019
 channel_sources:
-- conda-forge
+- conda-forge/label/python_rc,conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -15,15 +15,16 @@ libosqp:
 libxml2:
 - '2.11'
 numpy:
-- '1.21'
+- '1.26'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.12.* *_cpython
 target_platform:
 - win-64
 zip_keys:
 - - python
   - numpy
+  - channel_sources
