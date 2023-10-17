@@ -80,8 +80,8 @@ test:
 
 about:
   home: https://github.com/robotology/idyntree
-  license: LGPL-2.1-or-later
-  license_file: LICENSE.LGPL2
+  license: BSD-3-Clause
+  license_file: LICENSE
   summary: Multibody Dynamics Library designed for Free Floating Robots.
 
 extra:
