@@ -73,10 +73,14 @@ test:
     - if not exist %PREFIX%\\Library\\lib\\cmake\\iDynTree\\iDynTreeConfig.cmake exit 1  # [win]
     - test $(pip list | grep idyntree | tr -s " " | grep $PKG_VERSION | wc -l) -eq 1  # [unix]
     - pip check
+    - cmake-package-check iDynTree
   imports:
     - idyntree
   requires:
     - pip
+    - cmake-package-check
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
 about:
   home: https://github.com/robotology/idyntree

@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/idyntree-feedst
 
 Home: https://github.com/robotology/idyntree
 
-Package license: LGPL-2.1-or-later
+Package license: BSD-3-Clause
 
 Summary: Multibody Dynamics Library designed for Free Floating Robots.
 
