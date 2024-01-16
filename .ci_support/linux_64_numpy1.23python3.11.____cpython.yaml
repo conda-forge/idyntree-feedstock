@@ -21,7 +21,7 @@ ipopt:
 libosqp:
 - 0.6.3
 libxml2:
-- '2.11'
+- '2'
 numpy:
 - '1.23'
 pin_run_as_build:
