@@ -21,7 +21,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-aarch64
 ipopt:
-- 3.14.13
+- 3.14.14
 libosqp:
 - 0.6.3
 libxml2:
