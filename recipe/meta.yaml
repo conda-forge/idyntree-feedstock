@@ -27,14 +27,6 @@ requirements:
     - ninja
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
-    - {{ cdt('libxcb') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxau') }}  # [linux]
-    - {{ cdt('expat') }}  # [linux]
     - sed  # [unix]
     - diffutils  # [unix]
     - m2-sed  # [win]
@@ -55,6 +47,8 @@ requirements:
     - libosqp
     - osqp-eigen
     - assimp
+    - xorg-libx11  # [linux]
+    - xorg-libxrandr  # [linux]
     - xorg-libxfixes  # [linux]
 
   run:
