@@ -8,6 +8,8 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2019
+idyntree:
+- '11'
 ipopt:
 - 3.14.14
 libosqp:
