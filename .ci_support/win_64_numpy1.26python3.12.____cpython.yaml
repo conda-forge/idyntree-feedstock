@@ -2,6 +2,8 @@ assimp:
 - 5.3.1
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -9,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 idyntree:
-- '11'
+- '12'
 ipopt:
 - 3.14.14
 libosqp:
