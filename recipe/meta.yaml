@@ -33,7 +33,9 @@ requirements:
     - m2-sed  # [win]
     - m2-diffutils  # [win]
     - swig
-
+    # The build of libcxx 18 is currently broken on macOS.
+    # See: https://github.com/conda-forge/libcxx-feedstock/issues/162
+    - libcxx <18                              # [osx and x86_64]
   host:
     - libxml2
     - ipopt
