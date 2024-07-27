@@ -51,7 +51,9 @@ requirements:
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
     - xorg-libxfixes  # [linux]
-
+    # The build of libcxx 18 is currently broken on macOS.
+    # See: https://github.com/conda-forge/libcxx-feedstock/issues/162
+    - libcxx <18                              # [osx and x86_64]
   run:
     - python
 
