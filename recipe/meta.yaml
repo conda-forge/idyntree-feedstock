@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [ppc64le]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -26,8 +26,6 @@ requirements:
     - cmake
     - pkg-config
     - ninja
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - sed  # [unix]
     - diffutils  # [unix]
     - m2-sed  # [win]
@@ -48,6 +46,7 @@ requirements:
     - libosqp
     - osqp-eigen
     - assimp
+    - libgl-devel  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
     - xorg-libxfixes  # [linux]
