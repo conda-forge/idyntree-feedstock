@@ -16,9 +16,9 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_USES_LUA:BOOL=OFF \
       -DIDYNTREE_COMPILES_YARP_TOOLS:BOOL=OFF \
       -DPython3_EXECUTABLE:PATH=$PYTHON \
-      -DPython3_INCLUDE_DIR:PATH=$PREFIX/include/`ls $PREFIX/include | grep "python\|pypy"`
+      -DPython3_INCLUDE_DIR:PATH=$PREFIX/include/`ls $PREFIX/include | grep "python\|pypy"` \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
-      -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \\
+      -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \
       --debug-find
 
 cmake --build . --config Release ${NUM_PARALLEL}
