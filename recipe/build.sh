@@ -1,20 +1,5 @@
 #!/bin/sh
 
-
-if [[ ${target_platform} == "linux-aarch64" ]]; then
-  echo "Using 1 thread to build"
-  export NUM_PARALLEL=-j1
-else
-  echo "Use all available cores to build"
-  export NUM_PARALLEL=
-fi
-
-if [[ ${target_platform} == "linux-ppc64le" ]]; then
-  export BUILD_TESTING=OFF
-else
-  export BUILD_TESTING=ON
-fi
-
 mkdir build
 cd build
 
@@ -31,8 +16,11 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_USES_LUA:BOOL=OFF \
       -DIDYNTREE_COMPILES_YARP_TOOLS:BOOL=OFF \
       -DPython3_EXECUTABLE:PATH=$PYTHON \
+      -DPython3_INCLUDE_DIR:PATH=$PREFIX/include/`ls $PREFIX/include | grep "python\|pypy"` \
+      -DPython3_NumPy_INCLUDE_DIR=$SP_DIR/numpy/_core/include \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
-      -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda
+      -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \
+      --debug-find
 
 cmake --build . --config Release ${NUM_PARALLEL}
 cmake --build . --config Release --target install ${NUM_PARALLEL}
