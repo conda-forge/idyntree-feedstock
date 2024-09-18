@@ -1,5 +1,5 @@
 {% set name = "idyntree" %}
-{% set version = "12.4.0" %}
+{% set version = "13.0.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fd7993741a8e1f79a6b76d31b81d2b9dc9507f0b812508535a75d7df5b7ab15a
+  sha256: a7d73a115b20edca40dbd68256ea7021a809829ee51a56d84c6c68684d9ad2a8
 
 build:
-  number: 4
+  number: 0
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
