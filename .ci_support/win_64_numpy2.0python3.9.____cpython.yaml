@@ -1,5 +1,5 @@
 assimp:
-- 5.4.2
+- 5.4.3
 c_compiler:
 - vs2019
 c_stdlib:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 idyntree:
-- '12'
+- '13'
 ipopt:
 - 3.14.16
 libosqp:
