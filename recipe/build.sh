@@ -3,6 +3,7 @@
 mkdir build
 cd build
 
+Python3_NumPy_INCLUDE_DIR="$(python -c 'import numpy;print(numpy.get_include())')"
 cmake ${CMAKE_ARGS} -GNinja .. \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING:BOOL=${BUILD_TESTING} \
@@ -17,7 +18,7 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_COMPILES_YARP_TOOLS:BOOL=OFF \
       -DPython3_EXECUTABLE:PATH=$PYTHON \
       -DPython3_INCLUDE_DIR:PATH=$PREFIX/include/`ls $PREFIX/include | grep "python\|pypy"` \
-      -DPython3_NumPy_INCLUDE_DIR=$SP_DIR/numpy/_core/include \
+      -DPython3_NumPy_INCLUDE_DIR=${Python3_NumPy_INCLUDE_DIR} \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
       -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \
       --debug-find
