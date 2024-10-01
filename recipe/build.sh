@@ -5,6 +5,10 @@ cd build
 
 Python3_INCLUDE_DIR="$(python -c 'import sysconfig; print(sysconfig.get_path("include"))')"
 Python3_NumPy_INCLUDE_DIR="$(python -c 'import numpy;print(numpy.get_include())')"
+CMAKE_ARGS="${CMAKE_ARGS} -DPython3_EXECUTABLE:PATH=${PYTHON}"
+CMAKE_ARGS="${CMAKE_ARGS} -DPython3_INCLUDE_DIR:PATH=${Python3_INCLUDE_DIR}"
+CMAKE_ARGS="${CMAKE_ARGS} -DPython3_NumPy_INCLUDE_DIR=${Python3_NumPy_INCLUDE_DIR}"
+
 cmake ${CMAKE_ARGS} -GNinja .. \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING:BOOL=${BUILD_TESTING} \
@@ -17,9 +21,6 @@ cmake ${CMAKE_ARGS} -GNinja .. \
       -DIDYNTREE_USES_OCTAVE:BOOL=OFF \
       -DIDYNTREE_USES_LUA:BOOL=OFF \
       -DIDYNTREE_COMPILES_YARP_TOOLS:BOOL=OFF \
-      -DPython3_EXECUTABLE:PATH=$PYTHON \
-      -DPython3_INCLUDE_DIR:PATH=${Python3_INCLUDE_DIR} \
-      -DPython3_NumPy_INCLUDE_DIR=${Python3_NumPy_INCLUDE_DIR} \
       -DIDYNTREE_DETECT_ACTIVE_PYTHON_SITEPACKAGES:BOOL=ON \
       -DIDYNTREE_PYTHON_PIP_METADATA_INSTALLER=conda \
       --debug-find
