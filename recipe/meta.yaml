@@ -29,7 +29,7 @@ requirements:
     - diffutils  # [unix]
     - m2-sed  # [win]
     - m2-diffutils  # [win]
-    - swig
+    - swig  4.2.1
 
   host:
     - libxml2
