@@ -30,7 +30,6 @@ requirements:
     - m2-sed  # [win]
     - m2-diffutils  # [win]
     - swig
-
   host:
     - libxml2
     - ipopt
@@ -46,7 +45,6 @@ requirements:
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
     - xorg-libxfixes  # [linux]
-
   run:
     - python
 
