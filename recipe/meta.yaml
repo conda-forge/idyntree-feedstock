@@ -1,5 +1,5 @@
 {% set name = "idyntree" %}
-{% set version = "13.1.0" %}
+{% set version = "13.1.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eeb2a7dbff69e0bcb8634435c4705b73cff639d82640f131018ab189f20ce49f
+  sha256: 5e3004aededfd53cbb0359c4f263e227c69e04b25377983f85f7541c11e1306f
 
 build:
   number: 0
@@ -29,8 +29,7 @@ requirements:
     - diffutils  # [unix]
     - m2-sed  # [win]
     - m2-diffutils  # [win]
-    - swig  4.2.1
-
+    - swig
   host:
     - libxml2
     - ipopt
@@ -46,7 +45,6 @@ requirements:
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
     - xorg-libxfixes  # [linux]
-
   run:
     - python
 
