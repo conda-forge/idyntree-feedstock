@@ -23,7 +23,7 @@ docker_image:
 idyntree:
 - '13'
 ipopt:
-- 3.14.16
+- 3.14.17
 libosqp:
 - 0.6.3
 libxml2:
