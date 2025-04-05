@@ -25,9 +25,9 @@ idyntree:
 ipopt:
 - 3.14.17
 libosqp:
-- 0.6.3
+- 1.0.0
 libxml2:
-- '2'
+- '2.13'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
