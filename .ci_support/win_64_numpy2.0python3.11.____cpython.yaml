@@ -15,9 +15,9 @@ idyntree:
 ipopt:
 - 3.14.17
 libosqp:
-- 0.6.3
+- 1.0.0
 libxml2:
-- '2'
+- '2.13'
 numpy:
 - '2.0'
 pin_run_as_build:
