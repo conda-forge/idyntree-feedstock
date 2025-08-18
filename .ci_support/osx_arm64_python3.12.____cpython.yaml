@@ -7,7 +7,7 @@ assimp:
 c_compiler:
 - clang
 c_compiler_version:
-- '18'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -19,11 +19,11 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '18'
+- '19'
 idyntree:
 - '13'
 ipopt:
-- 3.14.17
+- 3.14.19
 libosqp:
 - 1.0.0
 libxml2:
