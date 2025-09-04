@@ -20,8 +20,6 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '19'
-idyntree:
-- '13'
 ipopt:
 - 3.14.19
 libosqp:
@@ -37,7 +35,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.13.* *_cp313
+- 3.12.* *_cpython
 target_platform:
 - osx-arm64
 zip_keys:
