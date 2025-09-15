@@ -10,7 +10,7 @@ source:
   sha256: 757f3c19d8d30601011f265d48fe050cc1f297ea8c03f06fdf9d2176db3c2fd4
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -31,7 +31,7 @@ requirements:
     - m2-diffutils  # [win]
     - swig
   host:
-    - libxml2
+    - libxml2-devel
     - ipopt
     - eigen
     - glfw
