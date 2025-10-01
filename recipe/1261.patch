@@ -1,0 +1,26 @@
+From 459c168b5c641d79c176c310cd4d93ce25369d89 Mon Sep 17 00:00:00 2001
+From: Lorenzo Moretti <107630048+LoreMoretti@users.noreply.github.com>
+Date: Wed, 1 Oct 2025 10:54:41 +0200
+Subject: [PATCH] Fix loading of reduced model
+
+---
+ bindings/python/visualize/meshcat_visualizer.py | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/bindings/python/visualize/meshcat_visualizer.py b/bindings/python/visualize/meshcat_visualizer.py
+index c474191032..07b44304ae 100644
+--- a/bindings/python/visualize/meshcat_visualizer.py
++++ b/bindings/python/visualize/meshcat_visualizer.py
+@@ -602,11 +602,7 @@ def load_model_from_file(
+             ok = model_loader.loadModelFromFile(path_str)
+ 
+         else:
+-            considered_joints_idyn = idyn.StringVector()
+-            for joint in considered_joints:
+-                considered_joints_idyn.push_back(joint)
+-
+-            ok = model_loader.loadReducedModelFromFile(path_str, considered_joints_idyn)
++            ok = model_loader.loadReducedModelFromFile(path_str, considered_joints)
+ 
+         if not ok:
+             msg = (
