@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 75d586f2295bb0a02388aea4050e2a8b0d6adc8d346094422fc0a0154cc7e034
-  patches:
-    - 1261.patch
 
 build:
   number: 0
