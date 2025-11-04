@@ -32,6 +32,8 @@ macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
 - '2'
+osqp_eigen:
+- '0.11'
 pin_run_as_build:
   python:
     min_pin: x.x
