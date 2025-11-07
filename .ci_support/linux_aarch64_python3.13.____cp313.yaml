@@ -19,7 +19,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 idyntree:
-- '13'
+- '14'
 ipopt:
 - 3.14.19
 libosqp:
