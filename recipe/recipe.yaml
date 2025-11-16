@@ -15,21 +15,6 @@ source:
 build:
   number: 1
 
-about:
-  homepage: https://github.com/robotology/idyntree
-  license: BSD-3-Clause
-  license_file: LICENSE
-  summary: Multibody Dynamics Library designed for Free Floating Robots.
-  description: |
-    iDynTree is a library of dynamics computations for articulated robots with
-    floating base, supporting algorithms for kinematics, dynamics, estimation,
-    and visualization, with optional Python bindings.
-  repository: https://github.com/robotology/idyntree
-
-extra:
-  recipe-maintainers:
-    - traversaro
-
 outputs:
   - package:
       name: libidyntree
@@ -43,6 +28,7 @@ outputs:
       build:
         - ${{ compiler('c') }}
         - ${{ compiler('cxx') }}
+        - ${{ stdlib('c') }}
         - cmake
         - ninja
         - pkg-config
@@ -89,6 +75,7 @@ outputs:
       build:
         - ${{ compiler('c') }}
         - ${{ compiler('cxx') }}
+        - ${{ stdlib('c') }}
         - cmake
         - ninja
         - pkg-config
@@ -141,4 +128,18 @@ outputs:
             - idyntree
     about:
       summary: iDynTree metapackage that depends on libidyntree and idyntree-python.
-  
+
+about:
+  homepage: https://github.com/robotology/idyntree
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Multibody Dynamics Library designed for Free Floating Robots.
+  description: |
+    iDynTree is a library of dynamics computations for articulated robots with
+    floating base, supporting algorithms for kinematics, dynamics, estimation,
+    and visualization, with optional Python bindings.
+  repository: https://github.com/robotology/idyntree
+
+extra:
+  recipe-maintainers:
+    - traversaro
