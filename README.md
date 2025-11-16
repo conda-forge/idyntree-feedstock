@@ -3,11 +3,51 @@ About idyntree-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/idyntree-feedstock/blob/main/LICENSE.txt)
 
+
+About idyntree
+--------------
+
 Home: https://github.com/robotology/idyntree
 
 Package license: BSD-3-Clause
 
-Summary: Multibody Dynamics Library designed for Free Floating Robots.
+Summary: iDynTree metapackage that depends on libidyntree and idyntree-python.
+
+Development: https://github.com/robotology/idyntree
+
+iDynTree is a library of dynamics computations for articulated robots with
+floating base, supporting algorithms for kinematics, dynamics, estimation,
+and visualization, with optional Python bindings.
+
+About idyntree-python
+---------------------
+
+Home: https://github.com/robotology/idyntree
+
+Package license: BSD-3-Clause
+
+Summary: Python bindings for iDynTree.
+
+Development: https://github.com/robotology/idyntree
+
+iDynTree is a library of dynamics computations for articulated robots with
+floating base, supporting algorithms for kinematics, dynamics, estimation,
+and visualization, with optional Python bindings.
+
+About libidyntree
+-----------------
+
+Home: https://github.com/robotology/idyntree
+
+Package license: BSD-3-Clause
+
+Summary: iDynTree C++ library.
+
+Development: https://github.com/robotology/idyntree
+
+iDynTree is a library of dynamics computations for articulated robots with
+floating base, supporting algorithms for kinematics, dynamics, estimation,
+and visualization, with optional Python bindings.
 
 Current build status
 ====================
@@ -27,213 +67,45 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.10.____cpython</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.11.____cpython</td>
+              <td>linux_aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.12.____cpython</td>
+              <td>linux_ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.13.____cp313</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.14.____cp314</td>
+              <td>osx_arm64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.14.____cp314" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_python3.10.____cpython</td>
+              <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13440&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.14.____cp314" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/idyntree-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -250,6 +122,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-idyntree-green.svg)](https://anaconda.org/conda-forge/idyntree) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/idyntree.svg)](https://anaconda.org/conda-forge/idyntree) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/idyntree.svg)](https://anaconda.org/conda-forge/idyntree) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/idyntree.svg)](https://anaconda.org/conda-forge/idyntree) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-idyntree--python-green.svg)](https://anaconda.org/conda-forge/idyntree-python) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/idyntree-python.svg)](https://anaconda.org/conda-forge/idyntree-python) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/idyntree-python.svg)](https://anaconda.org/conda-forge/idyntree-python) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/idyntree-python.svg)](https://anaconda.org/conda-forge/idyntree-python) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libidyntree-green.svg)](https://anaconda.org/conda-forge/libidyntree) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libidyntree.svg)](https://anaconda.org/conda-forge/libidyntree) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libidyntree.svg)](https://anaconda.org/conda-forge/libidyntree) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libidyntree.svg)](https://anaconda.org/conda-forge/libidyntree) |
 
 Installing idyntree
 ===================
@@ -261,16 +135,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `idyntree` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `idyntree, idyntree-python, libidyntree` can be installed with `conda`:
 
 ```
-conda install idyntree
+conda install idyntree idyntree-python libidyntree
 ```
 
 or with `mamba`:
 
 ```
-mamba install idyntree
+mamba install idyntree idyntree-python libidyntree
 ```
 
 It is possible to list all of the versions of `idyntree` available on your platform with `conda`:
