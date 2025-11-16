@@ -38,8 +38,6 @@ outputs:
         - eigen
         - glfw
         - irrlicht
-        - python
-        - numpy
         - libosqp
         - osqp-eigen
         - assimp
