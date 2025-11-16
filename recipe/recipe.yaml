@@ -57,8 +57,14 @@ outputs:
             - iDynTree/KinDynComputations.h
           lib:
             - idyntree-core
-          files:
-            - lib/cmake/iDynTree/iDynTreeConfig.cmake
+      - script:
+          - cmake-package-check iDynTree --targets iDynTree::idyntree-core
+        requirements:
+          run:
+            - cmake-package-check
+            - ${{ compiler('c') }}
+            - ${{ compiler('cxx') }}
+            - cmake
     about:
       summary: iDynTree C++ library.
 
