@@ -23,7 +23,7 @@ outputs:
         - if: unix
           then: build_cxx.sh
         - if: win
-          then: bld_cxx.bat
+          then: build_cxx.bat
     requirements:
       build:
         - ${{ compiler('c') }}
@@ -70,7 +70,7 @@ outputs:
         - if: unix
           then: build_py.sh
         - if: win
-          then: bld_py.bat
+          then: build_py.bat
     requirements:
       build:
         - ${{ compiler('c') }}
