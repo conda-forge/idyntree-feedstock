@@ -1,0 +1,8 @@
+# We build two different variants for libidyntree:
+# * base: With all dependencies of idyntree enabled, except sdformat
+# * sdformat: With all dependencies of idyntree enabled, including sdformat
+# This ensure that idyntree (at least in the base variant) is always co-installable
+# with packages that depend on older version of sdformat
+IDYNTREE_DEPS_VARIANT:
+  - "base"
+  - "sdformat"
