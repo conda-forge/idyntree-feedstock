@@ -1,5 +1,5 @@
 context:
-  version: "14.0.2"
+  version: "14.1.0"
   name: idyntree
 
 recipe:
@@ -8,7 +8,7 @@ recipe:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 1a510238bf220a611bf4f35ae399d440efc4fd2be2d9557c3b7f06b8398b623c
+  sha256: 3905245fd36a59816495a83e66c13cc425f3df3f4d985dc03dc1e746e8a45c19
   patches:
     - 1272.patch
 
