@@ -23,7 +23,7 @@ outputs:
           then: build_cxx.sh
         - if: win
           then: build_cxx.bat
-      string: ${{ IDYNTREE_DEPS_VARIANT }}h${{ hash }}_${{ build_number }}
+      string: ${{ IDYNTREE_DEPS_VARIANT }}h${{ hash }}_${{ build if IDYNTREE_DEPS_VARIANT == "base" else build + 200 }}
       # sdformat variant gets a higher build number to ensure that it is installed unless
       # there are dependencies conflicts
       number: ${{ build if IDYNTREE_DEPS_VARIANT == "base" else build + 200 }}
