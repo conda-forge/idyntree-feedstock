@@ -12,7 +12,7 @@ source:
   sha256: 3905245fd36a59816495a83e66c13cc425f3df3f4d985dc03dc1e746e8a45c19
 
 build:
-  number: {{ build }}
+  number: ${{ build }}
 
 outputs:
   - package:
