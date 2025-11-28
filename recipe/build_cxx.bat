@@ -1,6 +1,13 @@
 mkdir build_cxx
 cd build_cxx
 
+if "%IDYNTREE_DEPS_VARIANT%"=="sdformat" (
+  set "CMAKE_ARGS=%CMAKE_ARGS% -DIDYNTREE_USES_SDFORMAT:BOOL=ON"
+) else (
+  set "CMAKE_ARGS=%CMAKE_ARGS% -DIDYNTREE_USES_SDFORMAT:BOOL=OFF"
+)
+
+
 cmake ^
     -G "Ninja" ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^

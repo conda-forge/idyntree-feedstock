@@ -3,6 +3,12 @@
 mkdir build_cxx
 cd build_cxx
 
+if [[ "${IDYNTREE_DEPS_VARIANT}" == "sdformat" ]]; then
+  CMAKE_ARGS="${CMAKE_ARGS} -DIDYNTREE_USES_SDFORMAT:BOOL=ON"
+else
+  CMAKE_ARGS="${CMAKE_ARGS} -DIDYNTREE_USES_SDFORMAT:BOOL=OFF"
+fi
+
 cmake ${CMAKE_ARGS} -GNinja .. \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING:BOOL=ON \

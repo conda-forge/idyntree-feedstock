@@ -1,3 +1,6 @@
+IDYNTREE_DEPS_VARIANT:
+- base
+- sdformat
 assimp:
 - 5.4.3
 c_compiler:
