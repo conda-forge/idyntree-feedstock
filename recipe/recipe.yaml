@@ -1,6 +1,7 @@
 context:
   version: "14.1.0"
   name: idyntree
+  build: 0
 
 recipe:
   name: ${{ name }}-split
@@ -9,11 +10,9 @@ recipe:
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 3905245fd36a59816495a83e66c13cc425f3df3f4d985dc03dc1e746e8a45c19
-  patches:
-    - 1272.patch
 
 build:
-  number: 1
+  number: {{ build }}
 
 outputs:
   - package:
@@ -24,6 +23,10 @@ outputs:
           then: build_cxx.sh
         - if: win
           then: build_cxx.bat
+      string: ${{ IDYNTREE_DEPS_VARIANT }}h${{ hash }}_${{ build_number }}
+      # sdformat variant gets a higher build number to ensure that it is installed unless
+      # there are dependencies conflicts
+      number: ${{ build if IDYNTREE_DEPS_VARIANT == "base" else build + 200 }}
     requirements:
       build:
         - ${{ compiler('c') }}
@@ -41,6 +44,9 @@ outputs:
         - libosqp
         - osqp-eigen
         - assimp
+        - if: IDYNTREE_DEPS_VARIANT == "sdformat"
+          then:
+            - libsdformat
         - if: linux
           then:
             - libgl-devel
