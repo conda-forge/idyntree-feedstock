@@ -1,5 +1,5 @@
 context:
-  version: "14.1.0"
+  version: "14.2.0"
   name: idyntree
   build: 0
 
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://github.com/robotology/idyntree/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 3905245fd36a59816495a83e66c13cc425f3df3f4d985dc03dc1e746e8a45c19
+  sha256: 51fee8457f415dc2710ca93e9a66a846aec9445dde09efea75520d00099deb66
 
 build:
   number: ${{ build }}
