@@ -43,6 +43,7 @@ outputs:
         - irrlicht
         - libosqp
         - osqp-eigen
+        - eigen-abi-devel
         - assimp
         - if: IDYNTREE_DEPS_VARIANT == "sdformat"
           then:
