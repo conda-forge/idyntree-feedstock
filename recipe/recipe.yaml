@@ -1,7 +1,7 @@
 context:
   version: "15.0.0"
   name: idyntree
-  build: 0
+  build: 1
 
 recipe:
   name: ${{ name }}-split
@@ -43,6 +43,7 @@ outputs:
         - irrlicht
         - libosqp
         - osqp-eigen
+        - eigen-abi-devel
         - assimp
         - if: IDYNTREE_DEPS_VARIANT == "sdformat"
           then:
