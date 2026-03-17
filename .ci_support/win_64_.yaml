@@ -13,6 +13,8 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2022
+eigen_abi_devel:
+- 5.0.1
 ipopt:
 - 3.14.19
 libosqp:
