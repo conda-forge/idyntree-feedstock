@@ -45,6 +45,8 @@ outputs:
         - osqp-eigen
         - eigen-abi-devel
         - assimp
+        - nlohmann_json
+        - libresolve-robotics-uri-cpp >=0.1.0
         - if: IDYNTREE_DEPS_VARIANT == "sdformat"
           then:
             - libsdformat
