@@ -1,7 +1,7 @@
 context:
-  version: "15.0.0"
+  version: "15.0.1"
   name: idyntree
-  build: 2
+  build: 0
 
 recipe:
   name: ${{ name }}-split
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://github.com/gbionics/idyntree/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 49e5c299c7701965f8030a1dab3df50c8eb58aad09d885dddd9e0912ad23aa30
+  sha256: 361300897a3152d6a3005f71c05cb0f855348c8408de47a598f307b9af3c09df
 
 build:
   number: ${{ build }}
@@ -45,6 +45,8 @@ outputs:
         - osqp-eigen
         - eigen-abi-devel
         - assimp
+        - nlohmann_json
+        - libresolve-robotics-uri-cpp >=0.1.0
         - if: IDYNTREE_DEPS_VARIANT == "sdformat"
           then:
             - libsdformat
