@@ -1,5 +1,5 @@
 context:
-  version: "15.0.1"
+  version: "15.1.0"
   name: idyntree
   build: 0
 
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://github.com/gbionics/idyntree/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 361300897a3152d6a3005f71c05cb0f855348c8408de47a598f307b9af3c09df
+  sha256: ddff2ea97fa1a9728936239b4bd9cf11468ec2384b9d5dde8b7a339082053283
 
 build:
   number: ${{ build }}
