@@ -1,8 +1,6 @@
 IDYNTREE_DEPS_VARIANT:
 - base
 - sdformat
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
 MACOSX_SDK_VERSION:
 - '11.0'
 assimp:
@@ -10,7 +8,7 @@ assimp:
 c_compiler:
 - clang
 c_compiler_version:
-- '19'
+- '21'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -22,7 +20,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 eigen_abi_devel:
 - 5.0.1
 ipopt:
@@ -30,7 +28,7 @@ ipopt:
 libosqp:
 - 1.0.0
 libxml2_devel:
-- '2.14'
+- '2.15'
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
@@ -42,11 +40,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
 - 3.11.* *_cpython
 - 3.12.* *_cpython
 - 3.13.* *_cp313
 - 3.14.* *_cp314
+- 3.15.* *_cp315
 target_platform:
 - osx-arm64
 zip_keys:
