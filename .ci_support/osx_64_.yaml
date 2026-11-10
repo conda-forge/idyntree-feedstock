@@ -24,7 +24,7 @@ cxx_compiler_version:
 eigen_abi_devel:
 - 5.0.1
 ipopt:
-- 3.14.19
+- 3.14.20
 libosqp:
 - 1.0.0
 libxml2_devel:
