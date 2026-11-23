@@ -1,7 +1,7 @@
 context:
-  version: "15.1.0"
+  version: "15.2.0"
   name: idyntree
-  build: 1
+  build: 0
 
 recipe:
   name: ${{ name }}-split
@@ -9,7 +9,7 @@ recipe:
 
 source:
   url: https://github.com/gbionics/idyntree/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: ddff2ea97fa1a9728936239b4bd9cf11468ec2384b9d5dde8b7a339082053283
+  sha256: fde9d7947699d84626e25648937d5e3ffb89354b59db68b967ebf9c6e4429c49
 
 build:
   number: ${{ build }}
@@ -34,7 +34,7 @@ outputs:
         - ${{ stdlib('c') }}
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
       host:
         - libxml2-devel
         - ipopt
@@ -91,7 +91,7 @@ outputs:
         - ${{ stdlib('c') }}
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
         - swig
         - if: build_platform != target_platform
           then:
