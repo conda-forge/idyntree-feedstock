@@ -8,7 +8,7 @@ assimp:
 c_compiler:
 - clang
 c_compiler_version:
-- '21'
+- '22'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -20,7 +20,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '21'
+- '22'
 eigen_abi_devel:
 - 5.0.1
 ipopt:
