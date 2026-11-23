@@ -34,7 +34,7 @@ outputs:
         - ${{ stdlib('c') }}
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
       host:
         - libxml2-devel
         - ipopt
@@ -91,7 +91,7 @@ outputs:
         - ${{ stdlib('c') }}
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
         - swig
         - if: build_platform != target_platform
           then:
